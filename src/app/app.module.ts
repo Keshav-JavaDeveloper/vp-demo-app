@@ -8,12 +8,18 @@ import { RegistrationComponent } from './registration/registration.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { UsersService } from './users.service';
+import { CoffeePurchaseComponent } from './coffee-purchase/coffee-purchase.component';
+import { FoodOrderComponent } from './food-order/food-order.component';
+import { MiniShopComponent } from './mini-shop/mini-shop.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    CoffeePurchaseComponent,
+    FoodOrderComponent,
+    MiniShopComponent
   ],
   imports: [
     BrowserModule,
