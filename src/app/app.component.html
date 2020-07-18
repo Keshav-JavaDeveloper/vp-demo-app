@@ -1,0 +1,57 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <!-- <img width="160" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
+</div>
+
+
+
+
+  <nav class="navbar navbar-expand  navbar-dark  bg-dark">
+    <a routerLink="/home" routerLinkActive="active" class="navbar-brand">Messaging Application</a> 
+    <div class="navbar-nav mr-auto">
+      <button class="nav-item ">
+        <a routerLink="/register" routerLinkActive="active">New User Register</a>
+      </button> <hr><hr>
+      <button class="nav-item">
+        <a routerLink="/login"  routerLinkActive="active" >SignIn</a>
+      </button>  <hr><hr>
+    
+      <button class="nav-item">
+        <a routerLink="/home"routerLinkActive="active" >HOME</a>
+      </button>
+    </div>
+  </nav>
+<!-- Image slider -->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="height:300px"> 
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="width:1200px;height:360px" >
+        <!-- <img class="d-block w-100" src="assets/one.jpg" alt="First slide"> -->
+        <img class="d-block w-50" src="assets/abc.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item" style="width:1200px;height:360px">
+        <img class="d-block w-50" src="assets/abc1.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item" style="width:1200px;height:360px">
+        <img class="d-block w-50" src="assets/abc2.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<br><br><br><br><br><br>
+
+
+<!-- <app-home></app-home> -->
+<!-- <app-registration></app-registration> -->
+<!-- <app-login></app-login> -->
+<router-outlet></router-outlet>

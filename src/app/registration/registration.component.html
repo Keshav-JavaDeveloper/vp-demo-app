@@ -1,0 +1,25 @@
+
+<div *ngIf="!registerMsg"  class="container bg bg-info  ">
+   <h2>Enter your Details to get register</h2>
+<form action=""  [formGroup]="details"  (ngSubmit)="whenSubmitted(details.value)" class="form-group">
+
+  <div class="form-group"><label for=""> FirstName<input type="text" formControlName="firstname" class="form-control" ></label> </div>
+  <div class="form-group"><label for=""> LastName<input type="text" formControlName="lastname" class="form-control" ></label></div>
+  <div class="form-group"><label for=""> PLACE<input type="text" formControlName="place" class="form-control"></label></div>
+  <div class="form-group"><label for=""> MAIL ID<input type="mail" formControlName="mailID" class="form-control"></label></div>
+  <br><br>
+  <button type="submit" #sub  class="btn btn-primary">Sign-Up</button>
+  </form>
+  
+  <div *ngIf="details.get('firstname').invalid && (details.get('firstname').touched||details.get('firstname').dirty)"  style="color:red ;">
+    <div *ngIf="details.get('firstname').errors.required ">firstname  is mandatory field</div>
+    <div *ngIf="details.get('firstname').errors.minlength">MIn 4 letters must be therwe </div>
+    <div *ngIf="details.get('firstname').errors.maxlength">Max 12 letters only should be there</div>
+  </div>
+  
+  <div *ngIf="details.get('place').invalid && (details.get('place').touched||details.get('place').dirty)"  style="color:red ;">
+           <div *ngIf="details.get('place').errors.required">PLACE is mandatory field</div>     
+  </div>
+
+</div>
+<h2 *ngIf="registerMsg" style="color:blue"> User Successfully Registered</h2>
